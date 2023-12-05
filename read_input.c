@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "simple_shell.h"
 /**
  * el_obi - this function reads the input from the user.
  * @ptrln: line pointer
