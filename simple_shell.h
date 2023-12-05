@@ -13,5 +13,7 @@
 #define ULT_CHAR 1024
 
 ssize_t el_obi(char **ptrln, size_t *size);
+int our_snprintf(char *string, size_t size, const char *frmt, ...);
+char *search(const char *getroute);
 
 #endif
