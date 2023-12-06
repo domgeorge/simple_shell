@@ -23,7 +23,7 @@ else if (child_pid == 0)
 find = token[0];
 while (find != NULL)
 {
-if (strchr(find, '/'))
+if (_strchr(find, '/'))
 {
 if (execve(find, token, tail) == -1)
 {
