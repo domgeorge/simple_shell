@@ -17,5 +17,6 @@ int our_snprintf(char *string, size_t size, const char *frmt, ...);
 char *search(const char *getroute);
 void execute(char **token);
 char *_strchr(const char *s, int c);
+size_t _strlen(const char *s);
 
 #endif
