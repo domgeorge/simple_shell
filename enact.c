@@ -37,7 +37,7 @@ root = search(find);
 if (find == NULL)
 {
 our_snprintf(err, sizeof(err), " Error: %s\n", find);
-write(STDERR_FILENO, err, strlen(err));
+write(STDERR_FILENO, err, _strlen(err));
 exit(EXIT_FAILURE);
 }
 if (execve(origin, token, tail) == -1)
