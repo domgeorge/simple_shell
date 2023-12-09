@@ -20,5 +20,9 @@ char *_strchr(const char *s, int c);
 size_t _strlen(const char *s);
 int env(void);
 int env_set(char **token);
+void str_div(char *str);
+int env_unset(char **token);
+int inbuilt(char **array_token);
+int _strcmp(const char *str1, const char *str2);
 
 #endif

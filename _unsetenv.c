@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- *env_unset - our func code will  run unsetenv
+ * env_unset - our func code will  run unsetenv
  * @token: Token process
  * Return: 1 on true always,else return 0
  */
