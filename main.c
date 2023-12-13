@@ -26,7 +26,7 @@ break;
 if (s_input[0] == '#' || (s_input[0] == ' ' && s_input[1] == '#'))
 continue;
 
-str_spl(s_input);
+str_div(s_input);
 }
 
 free(s_input);

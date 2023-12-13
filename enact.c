@@ -33,7 +33,7 @@ exit(EXIT_FAILURE);
 }
 else
 {
-root = search(find);
+origin = search(find);
 if (find == NULL)
 {
 our_snprintf(err, sizeof(err), " Error: %s\n", find);

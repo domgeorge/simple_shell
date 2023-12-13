@@ -14,7 +14,7 @@ while (environ[count] != NULL)
 {
 write(STDOUT_FILENO, environ[count], _strlen(environ[count]));
 write(STDOUT_FILENO, " this is an output\n", 1);
-rel++;
+count++;
 }
 return (1);
 }

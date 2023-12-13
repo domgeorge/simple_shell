@@ -24,7 +24,7 @@ if (access(routebuff, X_OK) == 0)
 {
 free(route1);
 free(route2);
-return (strdup(routebuff));
+return (_strdup(routebuff));
 }
 }
 free(route1);

@@ -8,25 +8,19 @@ void str_div(char *str);
 */
 void str_div(char *str)
 {
-char *token, *cut_str = str, *end;
+char *token, *cut_str = str;
 char *delimiter = " \t\n";
-char **array_token = malloc(sizeof(char *) * MAXIMUM_LINE);
-int count = 0, envy;
-for (; *cut_str == ' ' || *cut_str == '\t'; cut_str++)
-{
-}
-end = cut_str + _strlen(cut_str) - 1;
-for (; cut > cut_str && (*end == ' ' || *end == '\t'); end--)
-{
-*end = '\0';
-}
+char **array_token = malloc(sizeof(char *) * ULT_CHAR);
+int count = 0;
+int i;
+
 if (!array_token)
 {
-perror(" not available");
+perror("Memory allocation failed");
 exit(EXIT_FAILURE);
 }
-token = strtok(cut_str, delimiter);
-while (token != NULL)
+
+while ((token = _strtok(cut_str, delimiter)) != NULL)
 {
 array_token[count] = _strdup(token);
 if (array_token[count] == NULL)
@@ -35,9 +29,11 @@ perror("String tokenization failed");
 exit(EXIT_FAILURE);
 }
 count++;
-token = _strtok(NULL, delimiter);
+cut_str = NULL;
 }
+
 array_token[count] = NULL;
+
 if (count > 0)
 {
 if (!inbuilt(array_token))
@@ -45,9 +41,10 @@ if (!inbuilt(array_token))
 execute(array_token);
 }
 }
-for (envy = 0; envy < count; envy++)
+
+for (i = 0; i < count; i++)
 {
-free(array_token[envy]);
+free(array_token[i]);
 }
 free(array_token);
 }
